@@ -76,7 +76,7 @@ img {
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
-    border-bottom: 1px;
+    border-bottom: 1px solid #ECECEC;
     background-color: #FFFFFF;
 }
 
@@ -123,7 +123,15 @@ img {
     align-items: center;
 }
 
+.contact-info-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contact-mail-header {
+    display: inline-flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -131,14 +139,9 @@ img {
     color: var(--second-text-color);
 }
 
-.contact-info-item {
-    display: flex;
-    align-items: center;
-    width: 161px;
-    height: 16px;
-}
-
 .contact-tel-header {
+    display: inline-flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -164,24 +167,14 @@ img {
     width: 16px;
     height: 12px;
     margin-right: 10px;
+    fill: var(--second-text-color);
 }
 
 .icon-tel {
     width: 10px;
     height: 16px;
     margin-right: 10px;
-}
-
-.contact-info-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.contact-info-link:hover,
-.contact-info-link:focus {
-    fill: var(--accent-color);
+    fill: var(--second-text-color);
 }
 
 .contact-mail-header:hover,
@@ -194,14 +187,31 @@ img {
     color: var(--accent-color);
 } 
 
+
+.contact-mail-header:hover .icon-contact,
+.contact-mail-header:focus .icon-contact {
+    fill: var(--accent-color);
+} 
+
+.contact-tel-header:hover .icon-contact,
+.contact-tel-header:focus .icon-contact {
+    fill: var(--accent-color);
+} 
+
+
 /*======END HEADER======*/
 
 /*======START INFO SECTION======*/
 .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/hero-photo.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #C4C4C4;
     padding: 200px 0px;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .info-section {
@@ -364,9 +374,10 @@ img {
     fill: #FFFFFF;
 }
 
-.social-list-link:not(:last-child) {
+.social-list-item:not(:last-child) {
     margin-right: 10px;
 }
+
 /*======END TEAM SECTION======*/
 
 /*======START PARTNERS======*/
@@ -398,12 +409,12 @@ img {
 }
 
 .partners-list-link:hover .partners-list-icon,
-.partners-list-link:hover .partners-list-icon {
+.partners-list-link:focus .partners-list-icon {
     fill: var(--accent-color);
 }
 
 .partners-list-link:hover,
-.partners-list-link:hover {
+.partners-list-link:focus {
     border-color: var(--accent-color);
 }
 
@@ -413,7 +424,7 @@ img {
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 /*======END PARTNERS======*/
 
@@ -473,11 +484,11 @@ img {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .join-social {
     margin-left: 70px;
-    padding-top: 12px;
 }
 
 .join-heading {
@@ -506,7 +517,7 @@ img {
 }
 
 .join-social-list-icon {
-    fill: #FFFFFF;
+    fill: #AFB1B8;
 }
 
 .join-social-list-link:hover,
@@ -514,8 +525,8 @@ img {
     background-color: var(--accent-color);
 }
 
-.join-social-list-link:hover .join-social-list-icon,
-.join-social-list-link:focus .join-social-list-icon {
+.join-social-list-link:hover .social-list-icon,
+.join-social-list-link:focus .social-list-icon {
     fill: #FFFFFF;
 }
 
@@ -568,18 +579,15 @@ img {
     flex-basis: calc(100%-90)/3;
 }
 
-.portfolio-item:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .portfolio-content {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
-    border-top: none
-    flex-basis: calc(100%-90)/3;
+    border-top: none;
+    flex-basis: calc((100% - 90px) / 3);
 }
 
 .portfolio-heading {
+    color: var(--primery-text-color);
     font-weight: 700;
     font-size: 18px;
     line-height: 2.00;
@@ -592,5 +600,10 @@ img {
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /*======END PORTFOLIO======*/
