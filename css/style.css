@@ -517,17 +517,12 @@ img {
 }
 
 .join-social-list-icon {
-    fill: #AFB1B8;
+    fill: #FFFFFF
 }
 
 .join-social-list-link:hover,
 .join-social-list-link:focus {
     background-color: var(--accent-color);
-}
-
-.join-social-list-link:hover .social-list-icon,
-.join-social-list-link:focus .social-list-icon {
-    fill: #FFFFFF;
 }
 
 .join-social-list-item:not(:last-child) {
